@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Jua Kali 1.0</string>
+    <string name="full_name">Full Name</string>
+    <string name="hint_name">Dennis Ochieng</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="hint_number">+254792935763</string>
+    <string name="id_number">ID NUmber</string>
+    <string name="example_idnumber">12345678</string>
+    <string name="email_address">Email Address</string>
+    <string name="example_email">dennis@gmail.com</string>
+    <string name="set_password">Set password</string>
+    <string name="example_password">fhdhr79efsj</string>
 </resources>

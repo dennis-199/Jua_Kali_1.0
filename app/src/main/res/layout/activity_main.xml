@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/welding"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -13,18 +13,21 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/eater"
-        android:text="Log in"
+        android:text="sign up"
         android:textColor="@color/white"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <ImageView
-        android:id="@+id/imagelogo"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:src="@drawable/sun"
+    <TextView
+        android:id="@+id/option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:text="Have an Account sign In"
+        android:textSize="27sp"
+        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
 
         android:layout_below="@id/logintext"/>
@@ -32,14 +35,128 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="15dp"
+
         android:gravity="center_horizontal"
-        android:layout_below="@id/imagelogo"
+        android:layout_below="@id/option"
         android:orientation="vertical">
         <androidx.cardview.widget.CardView
             android:layout_width="310dp"
-            android:layout_height="510dp"
-            app:cardElevation="10dp"
+            android:layout_height="460dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
             app:cardCornerRadius="45dp">
+            <io.alterac.blurkit.BlurLayout
+                android:id="@+id/blurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:blk_downscaleFactor="0.6"
+                app:blk_fps="0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"
+                    android:textSize="18sp"
+                    android:layout_marginStart="21dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="267dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center"
+                    android:layout_marginStart="21dp"
+                    android:hint="@string/hint_name"
+                    android:textStyle="italic"
+                    android:background="@drawable/circle"/>
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number"
+                    android:layout_marginStart="21dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="267dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="21dp"
+                    android:inputType="number"
+                    android:hint="@string/hint_number"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:background="@drawable/circle"/>
+                <TextView
+                    android:id="@+id/idnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/id_number"
+                    android:textSize="18sp"
+                    android:layout_marginStart="21dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="267dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center"
+                    android:layout_marginStart="21dp"
+                    android:inputType="number"
+                    android:hint="@string/example_idnumber"
+                    android:textStyle="italic"
+                    android:background="@drawable/circle"/>
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_address"
+                    android:textSize="18sp"
+                    android:layout_marginStart="21dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="267dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginStart="21dp"
+                    android:hint="@string/example_email"
+                    android:textStyle="italic"
+                    android:background="@drawable/circle"/>
+                <TextView
+                    android:id="@+id/password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_password"
+                    android:textSize="18sp"
+                    android:layout_marginStart="21dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="267dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="9dp"
+                    android:inputType="textWebPassword"
+                    android:gravity="center"
+                    android:layout_marginStart="21dp"
+                    android:hint="@string/example_password"
+                    android:textStyle="italic"
+                    android:background="@drawable/circle"/>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 

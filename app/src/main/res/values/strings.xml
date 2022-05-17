@@ -10,4 +10,14 @@
     <string name="example_email">dennis@gmail.com</string>
     <string name="set_password">Set password</string>
     <string name="example_password">fhdhr79efsj</string>
+    <string name="confirm_password">confirm password</string>
+    <string-array name="roles">
+        <item>Customer</item>
+        <item>Seller</item>
+        <item>Administrator</item>
+    </string-array>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
